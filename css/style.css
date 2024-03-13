@@ -1,0 +1,778 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --theme-color: #eb0029;
+    --theme-color-rgb: rgb(235, 0, 41);
+    --primary-color: #ff9d2d;
+    --primary-color-rgb: rgb(255, 157, 45);
+    --primary-light-color: #fd9d3e;
+    --primary-light-color-rgb: rgb(253, 157, 62);
+    --secondery-color: #ff0000;
+    --secondery-color-rgb: rgb(255, 0, 0);
+    --success-color: #75D007;
+    --success-color-rgb: rgb(117, 208, 7);
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --white-color-rgb: rgb(255, 255, 255);
+    --heading-font: 'Baloo Thambi 2';
+    --primary-text: 'Lato';
+    --secodery-text: 'Lobster Two';
+    --gutter-padding: 15px;
+    --shadow: 0px 2px 20px -5px rgba(0, 0, 0, 0.84);
+    --transition: all 0.4s ease;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: var(--primary-text);
+}
+
+ol,
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.containar {
+    width: 1320px;
+    margin: 0 auto;
+    padding-left: var(--gutter-padding);
+    padding-right: var(--gutter-padding);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+/* column class (width) */
+.w-1 {
+    width: 8.3333%;
+}
+
+.w-2 {
+    width: 16.6666%;
+}
+
+.w-3 {
+    width: 25%;
+}
+
+.w-4 {
+    width: 33.3333%;
+}
+
+.w-5 {
+    width: 41.6666%;
+}
+
+.w-6 {
+    width: 50%;
+}
+
+.w-7 {
+    width: 58.3333%;
+}
+
+.w-8 {
+    width: 66.6666%;
+}
+
+.w-9 {
+    width: 75%;
+}
+
+.w-10 {
+    width: 83.3333%;
+}
+
+.w-11 {
+    width: 91.6666%;
+}
+
+.w-12 {
+    width: 100%;
+}
+
+.w-1,
+.w-2,
+.w-3,
+.w-4,
+.w-5,
+.w-6,
+.w-7,
+.w-8,
+.w-9,
+.w-10,
+.w-11,
+.w-12 {
+    padding-left: var(--gutter-padding);
+    padding-right: var(--gutter-padding);
+}
+
+/* basic space class */
+.py-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.mb-10 {
+    margin-bottom: 30px;
+}
+
+/* flex-propery */
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.primary-btn {
+    padding: 15px 25px;
+    background-color: var(--theme-color);
+    color: var(--white-color);
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.backgorund,.booking,.login-page,.banner,.app-intro,.sub-banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* header */
+/* top-bar */
+.top-bar {
+    padding: 10px 0;
+    background-color: #f20c32;
+    color: var(--white-color);
+}
+
+.top-bar p {
+    font-size: 13px;
+    justify-content: center;
+}
+.dropdown-menu{
+    position: relative;
+    transition: o.3s;
+    cursor: pointer;
+}
+.sub-menu{
+    position: absolute;
+    width: 200px;
+    margin-top: 15px;
+    transition: .6s;
+    border-radius: 3px;
+    background-color: #ffffffab;
+    visibility: hidden;
+}
+.dropdown-menu:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown-menu ul li {
+    padding: 10px 20px;
+    color: #000000;
+}
+.sub-menu::before,.review-contain::before {
+    content: "";
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top-style: solid;
+    border-top-width: 15px;
+    left: 21px;
+    margin-top: -7.5px;
+    top: -7px;
+    transform: rotate(180deg);
+    border-top-color: #ffffffad;
+}
+.social-icon ul,.top-bar p,.login,.menu,.header-btn {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icon ul li,
+.menu li {
+    padding: 0 10px;
+}
+
+.social-icon ul li a,
+.login a{
+    color: var(--white-color);
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.social-icon ul li a:hover,
+.login a:hover {
+    color: rgba(255, 0, 0, 0.9);
+}
+
+.login a {
+    transition: var(--transition);
+}
+
+.login a span {
+    padding-left: 10px;
+}
+
+/* main navigaion */
+.main-navigation {
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.menu li a span {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-weight: 800;
+}
+
+.menu li a i {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--primary-color)
+}
+
+.header-btn .icon-btn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    line-height: 45px;
+    border: 1px solid #d0dbe9;
+    color: #010f1c;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transition);
+    margin: 0 5px;
+}
+
+.header-btn .icon-btn:hover {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+}
+
+.header-btn .primary-btn {
+    margin: 0 10px;
+}
+
+/* banner */
+.banner ,.app-intro,.sub-banner{
+    width: 100%;
+    height: 750px;
+    background-image: url('../images/pizza/slider-2.jpg');
+    background-position: center top;
+    color: var(--white-color);
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.containImg {
+    transform: translateY(-100px);
+}
+
+.bannerContain h3 {
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.bannerHeading {
+    font-family: var(--secodery-text);
+    font-size: 200px;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.bannerContain .banner_img {
+    width: 250px;
+    margin-left: auto;
+    transform: scale(1);
+}
+
+.bannerContain p {
+    margin-left: 40px;
+    font-size: 20px;
+    word-spacing: 2px;
+}
+
+/* orderDetail */
+.orderContain h3 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.orderDetail {
+    background-color: var(--primary-light-color);
+}
+
+.orderProcess:hover .orderImg img {
+    filter: invert(1);
+}
+
+.orderImg img {
+    width: 100px;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+/* <!-- speciality  --> */
+.title,
+.orderDetail,
+.spebtn,
+.card,
+.header-btn .icon-btn {
+    text-align: center;
+}
+
+.title span {
+    font-family: var(--secodery-text);
+    color: var(--primary-color);
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.title h2 {
+    font-size: 70px;
+    font-family: var(--heading-font);
+    margin-bottom: 20px;
+}
+.spebtn {
+    margin-top: 30px;
+}
+
+.spebtn a.primary-btn {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.spebtn a.primary-btn:hover {
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+/*product*/
+.product,
+.team,
+.review,
+.footer,
+.footer-inner{
+    background-color: var(--black-color);
+}
+
+.roll-page {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #d0dbe933;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+}
+
+.roll-btn {
+    font-size: 17px;
+    background-color: var(--primary-color);
+}
+
+.card {
+    width: 100%;
+    background-color: #d0dbe933;
+    padding: 20px;
+    margin: 15px auto;
+    color: var(--white-color);
+    border-radius: 10px;
+}
+
+.card-img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #ffffffbc;
+}
+
+.card .price {
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+.card .card-btn button,
+.card-btn .submit-btn {
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 20px 0 5px;
+    transition: var(--transition);
+}
+
+.card .card-btn button:hover {
+    background-color: transparent;
+    color: var(--secondery-color);
+}
+
+.card-btn .submit-btn {
+    width: 80%;
+    font-size: 19px;
+}
+
+/*booking table*/
+.booking{
+    width: 100%;
+    height: 650px;
+    background-image: url('../images/pizza/dinner-table.jpg');
+}
+.book-form h3 {
+    font-size: 30px;
+    font-family: var(--heading-font);
+}
+
+.bookForm input,
+.bookForm select ,
+.subscribe-input form input{
+    width: 40%;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    padding: 10px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+/*team*/
+.team .title {
+    margin-top: 1%;
+}
+
+.team .card .card-body p {
+    font-size: 14px;
+}
+
+/* news */
+.news .card {
+    background-color: #58585836;
+    padding: 10px;
+}
+
+.news .card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.news .card {
+    position: relative;
+}
+
+.news .card .card-body {
+    margin-top: 20px;
+    color: #000000ab;
+    text-align: left;
+}
+
+.news .news-date {
+    width: 65px;
+    height: 65px;
+    background-color: var(--primary-color);
+    font-family: var(--heading-font);
+    outline: 4px solid #fd9d3e80;
+    position: absolute;
+    bottom: 30%;
+    right: 30px;
+    border-radius: 100%;
+    padding: 7px;
+    font-weight: 700;
+}
+
+.news .news-date span {
+    font-size: 11px;
+}
+
+/* review */
+.review-card .review-img img,.swiper-slide img {
+    width: 150px;
+    height: 150px;
+    outline: 5px solid var(--primary-color);
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.review-card .review-contain {
+    position: relative;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.review-contain::before{
+    left: -21px;
+    top: 80px;
+    transform: rotate(90deg);
+    border-top-color: var(--white-color);
+}
+
+.review-btn {
+    font-size: 13px;
+    font-weight: 700;
+    color: #eb0029;
+}
+/* .app-intro */
+.app-intro{
+    height: 500px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../images/pizza/app-intro.jpg');
+}
+.app-intro  .app-details img{
+    width: 200px;
+    height:60px;
+    border: 2px solid var(--white-color);
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.app-intro .app-img img{
+    width: 500px;
+    height: 500px;
+    transform: translate(-200px,-100px);
+}
+
+/* subscribe */
+.subscribe .title span {
+    color: var(--secondery-color);
+}
+
+.subscribe-input form input{
+    width: 72%;
+    
+}
+.subscribe-input form button {
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: var(--white-color);
+}
+
+.subscribe .border {
+    padding: 10px;
+    border: 5px solid var(--black-color);
+    outline: 10px solid var(--secondery-color);
+    outline-offset: 5px;
+    border-radius: 10px;
+}
+/* footer */
+section.footer,.footer-inner ,.dropdown-menu ul li a{
+    color: var(--white-color);
+}
+.innner-section{
+    padding-bottom: 50px;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: #ffffff45;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.footer .detail .logo {
+    margin-bottom: 40px;
+}
+.detail  a{
+    display: inline-block;
+    margin: 30px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    font-size: 20px;
+    border-radius: 4px;
+}
+.about-footer ul li{
+    margin: 20px 0;
+    display: flex;
+}
+.about-footer ul li a,.link-about ul li a{
+    color: var(--white-color);
+}
+.about-footer .about-link i{
+    margin: 15px 20px 0 0;
+}
+.about-link,.media-gallery{
+    display: flex;
+}
+.link-about ul {
+    list-style: disc;
+}
+.link-about ul li{
+    margin: 20px ;
+}
+.media-gallery .gallery-1 img{
+    width: 120px;
+    height: 100px;
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    margin: 15px 15px 0 0;
+    border-radius: 2px;
+    object-fit: cover;
+}
+.footer-inner{
+    padding:  10px 0 30px;
+    text-align: center;
+}
+.login-page,.register{
+    background-image: url('../images/login-background.jpg');
+    position: relative;
+    display: flex;
+}
+.login-background{
+    width: 550px;
+    height: 600px;
+    margin: 50px 0px 0px 300px;
+    border-radius: 20px;
+    padding: 50px;
+    background-image: url('../images/pizza/login.jpg');
+    position: relative;
+    overflow: hidden;
+    box-shadow: 20px 20px 20px #000000ac;
+    color: var(--white-color);
+    z-index: 1;
+}
+.sub-banner::after,.login-background::after{
+    content: '';
+    position: absolute;
+    background-color: #0000006e;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.login-background h2,.login-form h2{
+    font-family: var(--secodery-text);
+    font-size: 40px;
+    margin-top: 60%;
+}
+.login-form{
+    width: 450px;
+    height: 500px;
+    background-color: var(--white-color);
+    padding: 50px;
+    margin: 100px -150px;
+    z-index: 1;
+    border-radius: 5px;
+}
+.login-form input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px 0;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--black-color);
+}
+.login-form input:focus{
+    border-bottom: 3px solid var(--primary-color);
+}
+.register-page{
+    background-image: url('../images/pizza/register.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.register{
+    background-image: url('../images/register.jpeg');
+}
+.sub-banner{
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-image: url('../images//pizza/menu-banner.jpg');
+}
